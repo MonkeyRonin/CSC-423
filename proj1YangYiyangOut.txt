@@ -1,0 +1,181 @@
+Part A
+Paper 1 Table
+Obs	measurer	blue	white
+1	1		0.108	0.109
+2	2		0.101	0.097
+3	3		0.104	0.100
+4	4		0.105	0.095
+5	5		0.105	0.103
+6	6		0.108	0.103
+7	7		0.106	0.095
+8	8		0.104	0.097
+9	9		0.105	0.101
+10	10		0.108	0.103
+11	11		0.103	0.106
+12	12		0.103	0.102
+13	13		0.110	0.104
+14	14		0.109	0.102
+15	15		0.105	0.099
+16	16		0.107	0.102
+17	17		0.102	0.094
+18	18		0.104	0.097
+19	19		0.104	0.104
+20	20		0.100	0.097
+
+Paper 2 Table
+Obs	measurer	color	thickness
+1	1		blue	0.108
+2	2		blue	0.101
+3	3		blue	0.104
+4	4		blue	0.105
+5	5		blue	0.105
+6	6		blue	0.108
+7	7		blue	0.106
+8	8		blue	0.104
+9	9		blue	0.105
+10	10		blue	0.108
+11	11		blue	0.103
+12	12		blue	0.103
+13	13		blue	0.110
+14	14		blue	0.109
+15	15		blue	0.105
+16	16		blue	0.107
+17	17		blue	0.102
+18	18		blue	0.104
+19	19		blue	0.104
+20	20		blue	0.100
+21	1		white	0.109
+22	2		white	0.097
+23	3		white	0.100
+24	4		white	0.095
+25	5		white	0.103
+26	6		white	0.103
+27	7		white	0.095
+28	8		white	0.097
+29	9		white	0.101
+30	10		white	0.103
+31	11		white	0.106
+32	12		white	0.102
+33	13		white	0.104
+34	14		white	0.102
+35	15		white	0.099
+36	16		white	0.102
+37	17		white	0.094
+38	18		white	0.097
+39	19		white	0.104
+40	20		white	0.097
+
+Univariate Statistics
+Blue
+MomentsN		20		Sum Weights	20Mean	0.10505			Sum Observations	2.101Std Deviation	0.00266508	Variance	7.10263E-6Skewness	0.07029943	Kurtosis	-0.4856352Uncorrected SS	0.220845	Corrected SS	0.00013495Coeff Variation	2.53695981	Std Error Mean	0.00059593
+
+Basic Statistical Measures
+Location		Variability
+Mean	0.105050	Std Deviation	0.00267
+Median	0.105000	Variance	7.10263E-6
+Mode	0.104000	Range	0.01000
+ 	 		Interquartile Range	0.00400
+Quantiles (Definition 5)
+Level		Quantile
+100% Max	0.1100
+99%		0.1100
+95%		0.1095
+90%		0.1085
+75% Q3		0.1075
+50% Median	0.1050
+25% Q1		0.1035
+10%		0.1015
+5%		0.1005
+1%		0.1000
+0% Min		0.1000
+
+White
+Moments
+N	20			Sum Weights	20
+Mean	0.1005			Sum Observations	2.01
+Std Deviation	0.00401969	Variance	0.00001616
+Skewness	0.12695384	Kurtosis	-0.5541375
+Uncorrected SS	0.202312	Corrected SS	0.000307
+Coeff Variation	3.99968994	Std Error Mean	0.00089883
+
+Basic Statistical Measures
+Location		Variability
+Mean	0.100500	Std Deviation	0.00402
+Median	0.101500	Variance	0.0000162
+Mode	0.097000	Range	0.01500
+ 	 		Interquartile Range	0.00600
+
+Quantiles (Definition 5)
+Level	Quantile
+100% Max	0.1090
+99%		0.1090
+95%		0.1075
+90%		0.1050
+75% Q3		0.1030
+50% Median	0.1015
+25% Q1		0.0970
+10%		0.0950
+5%		0.0945
+1%		0.0940
+0% Min		0.0940
+
+95% Confidence Interval
+Variable	Lower 95%		Upper 95%
+		CL for Mean		CL for Mean
+blue		0.1038027		0.0986187
+white		0.1062973		0.1023813
+
+Part B
+User Table
+Obs	nusers
+1	17.2
+2	22.1
+3	18.5
+4	17.2
+5	18.6
+6	14.8
+7	21.7
+8	15.8
+9	16.3
+10	22.8
+11	24.1
+12	13.3
+13	16.2
+14	17.5
+15	19.0
+16	23.9
+17	14.8
+18	22.2
+19	21.7
+20	20.7
+21	13.5
+22	15.8
+23	13.1
+24	16.1
+25	21.9
+26	23.9
+27	19.3
+28	12.0
+29	19.9
+30	19.4
+31	15.4
+32	16.7
+33	19.5
+34	16.2
+35	16.9
+36	17.1
+37	20.2
+38	13.4
+39	19.8
+40	17.7
+41	19.7
+42	18.7
+43	17.6
+44	15.9
+45	15.2
+46	17.1
+47	15.0
+48	18.8
+49	21.6
+50	11.9
+

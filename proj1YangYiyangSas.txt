@@ -1,0 +1,100 @@
+Part A
+*Create dataset p1 and p2;
+data p1;
+	infile "/folders/myfolders/paper1.txt" firstobs = 2;
+	input measurer blue white;
+	
+data p2;
+	infile "/folders/myfolders/paper2.txt" firstobs = 2;
+	input measurer color$ thickness;
+	x = 1;
+*Print dataset;
+proc print data = p1;
+proc print data = p2;
+
+*Univariate Statistics;
+proc univariate data = p1;
+	var blue white;
+
+*Confidence Intervals;
+proc means data = p1 clm alpha = 0.05;
+	var blue white;
+	
+*Histograms(Default Bins);
+proc univariate data = p2 noprint;
+	histogram thickness;
+	
+*Histograms(More Bins);
+proc univariate data = p2 noprint;
+	histogram thickness / endpoints = (0.0945 to 0.1095 by 0.0025);
+	
+*Histograms(Less Bins);
+proc univariate data = p2 noprint;
+	histogram thickness / endpoints = (0.0945 to 0.1095 by 0.004);
+
+*Boxplot;
+proc sort data = p2;
+	by color;
+proc boxplot data = p2;
+ 	plot thickness * color; 
+run;
+
+Part B
+*Create Dataset;
+data nu;
+	input nusers @@;
+	datalines;
+17.2  22.1  18.5  17.2  18.6  14.8  21.7  15.8  16.3  22.8
+24.1  13.3  16.2  17.5  19.0  23.9  14.8  22.2  21.7  20.7
+13.5  15.8  13.1  16.1  21.9  23.9  19.3  12.0  19.9  19.4
+15.4  16.7  19.5  16.2  16.9  17.1  20.2  13.4  19.8  17.7
+19.7  18.7  17.6  15.9  15.2  17.1  15.0  18.8  21.6  11.9
+;
+
+proc print;
+
+*Create Normal Plot;
+proc univariate data = nu noprint;
+	probplot nusers /normal;
+	
+*95% Confidence Interval;
+proc means data = nu clm alpha= 0.05;
+	var nusers;
+	
+*ttest;
+proc ttest H0 = 17.2;
+	var nusers;
+run;
+
+Part C
+*Create Dataset;
+data p1;
+	infile "/folders/myfolders/paper1.txt" firstobs = 2;
+	input measurer blue white;
+	label blue = "Thickness of blue paper"
+		  white = "Thickness of white paper";
+	
+data p2;
+	infile "/folders/myfolders/paper2.txt" firstobs = 2;
+	input measurer color$ thickness;
+	label color = "Color of paper"
+		  thickness = "Thickness of paper";
+
+*Print Out Table;
+proc print data = p1;
+proc print data = p2;
+
+*Normal Plots;
+proc univariate data = p1 noprint;
+	probplot blue /normal;
+	probplot white/normal;
+
+*Paired t-test;	
+proc ttest data = p1;
+	paired blue * white;	
+
+*Independent two-sample t-test;
+proc ttest data = p2;
+	class color;
+	var thickness;
+run;
